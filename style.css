@@ -1,0 +1,1409 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border:0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  background:#fff;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #999;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+
+    color: #444;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+h4, h5 {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+}
+
+h5 {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  background: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+
+.menu-item,
+.menu-open-button {
+  
+   background: #EEEEEE;
+   border-radius: 100%;
+   width: 80px;
+   height: 80px;
+   margin-left: -40px;
+   position: absolute;
+   color: #FFFFFF;
+   text-align: center;
+   line-height: 80px;
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+   -webkit-transition: -webkit-transform ease-out 200ms;
+   transition: -webkit-transform ease-out 200ms;
+   transition: transform ease-out 200ms;
+   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open {
+     z-index: 20;
+   display: none;
+}
+
+.lines {
+    z-index:20;
+   width: 25px;
+   height: 3px;
+   background: #596778;
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -12.5px;
+   margin-top: -1.5px;
+   -webkit-transition: -webkit-transform 200ms;
+   transition: -webkit-transform 200ms;
+   transition: transform 200ms;
+   transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.line-1 {
+   -webkit-transform: translate3d(0, -8px, 0);
+   transform: translate3d(0, -8px, 0);
+}
+
+.line-2 {
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+
+.line-3 {
+   -webkit-transform: translate3d(0, 8px, 0);
+   transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .line-1 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+   transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .line-2 {
+   -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+   transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .line-3 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+   transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+    z-index:20;
+   margin: auto;
+   position: absolute;
+ 
+   bottom: 13%;
+
+   right: 10%;
+   width: 80px;
+   height: 80px;
+   text-align: center;
+   box-sizing: border-box;
+   font-size: 26px;
+  color:#fff;
+}
+
+
+/* .menu-item {
+   transition: all 0.1s ease 0s;
+} */
+
+.menu-item:hover {
+
+
+   color: #3290B1;
+}
+
+.menu-item:nth-child(3) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+
+}
+
+.menu-item:nth-child(4) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(5) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(6) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(7) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(8) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(9) {
+
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-open-button {
+  color:#fff;
+   z-index: 20;
+   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -webkit-transition-duration: 400ms;
+   transition-duration: 400ms;
+   -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+   transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+   cursor: pointer;
+ 
+}
+
+.menu-open-button:hover {
+   -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  
+   -webkit-transition-timing-function: linear;
+   transition-timing-function: linear;
+   -webkit-transition-duration: 200ms;
+   transition-duration: 200ms;
+   -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+   -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+   transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+   transition-duration: 180ms;
+   -webkit-transition-duration: 180ms;
+   -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+   transform: translate3d(0.08361px, -104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(4) {
+   transition-duration: 280ms;
+   -webkit-transition-duration: 280ms;
+   -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+   transform: translate3d(90.9466px, -52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(5) {
+   transition-duration: 380ms;
+   -webkit-transition-duration: 380ms;
+   -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+   transform: translate3d(90.9466px, 52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(6) {
+   transition-duration: 480ms;
+   -webkit-transition-duration: 480ms;
+   -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+   transform: translate3d(0.08361px, 104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(7) {
+   transition-duration: 580ms;
+   -webkit-transition-duration: 580ms;
+   -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+   transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(8) {
+   transition-duration: 680ms;
+   -webkit-transition-duration: 680ms;
+   -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+   transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(9) {
+   transition-duration: 780ms;
+   -webkit-transition-duration: 780ms;
+   -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+   transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+.blue {
+  
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+   
+}
+
+
+
+
+.blue:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.green {
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+   
+}
+
+.green:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.red {
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+  
+}
+
+.red:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.purple {
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+  
+}
+
+.purple:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.orange {
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+  
+}
+
+.orange:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.lightblue {
+      color:#fff;
+   background-color: #444;
+  transition:0.8s;
+}
+
+.lightblue:hover {
+   background-color: #222;
+   text-shadow: none;
+}
+
+.credit {
+   margin: 24px 20px 120px 0;
+   text-align: right;
+   color: #222;
+}
+
+.credit a {
+   padding: 8px 0;
+   color: #C49CDE;
+   text-decoration: none;
+   transition: all 0.3s ease 0s;
+}
+
+.credit a:hover {
+   text-decoration: underline;
+}
+
+.hea {
+  width:1200px;
+  margin: 0 auto;
+  background: none;
+}
+
+.hea div {
+  text-align:center;
+}
+
+.hea div img {
+  width: 400px;
+}
+
+.heab {
+  width: 1200px;
+  margin: 0 auto;
+  background:none;
+}
+
+.heab nav {
+  display:flex;
+  justify-content:space-between;
+  margin-top: 1.5rem;
+}
+
+
+.heab nav div {
+font-size: 1rem;
+  color:#222;
+ border:none;
+  position:relative;
+
+  padding:10px 30px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.heab nav div:hover{
+
+  color:#222;
+  border:none;
+}
+.heab nav div:before,
+.heab nav div:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #222;
+  transition:400ms ease all;
+}
+.heab nav div:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.heab nav div:hover:before,
+.heab nav div:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+
+main{
+  width:100%;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+main h1 {
+font-family: 'Nanum Myeongjo', serif;
+}
+
+main p {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.slider-container {
+  position: relative;
+  height: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.slider-control {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 12%;
+  height: 100%;
+  opacity: 0;
+}
+.slider-control.inactive:hover {
+  cursor: auto;
+}
+.slider-control:not(.inactive):hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+.slider-control.left {
+  left: 5%;
+top: 50%;
+  transform:translate(-50% 0);
+  transition:0.8s
+}
+.slider-control.right {
+  right: 0;
+top: 50%;
+  transform:translate(-50% 0);
+  transition:0.8s
+}
+
+.slider-pagi {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  font-size: 0;
+  list-style-type: none;
+}
+.slider-pagi__elem {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+background:none;
+  border:1px solid #fff;
+}
+.slider-pagi__elem:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  transform: translate(-50%, -50%) scale(0);
+}
+.slider-pagi__elem.active:before, .slider-pagi__elem:hover:before {
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.slider {
+  z-index: 0;
+  position: relative;
+  height: 100%;
+}
+.slider.animating {
+  transition: transform 0.5s;
+  will-change: transform;
+}
+.slider.animating .slide__bg {
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slide.active .slide__overlay,
+.slide.active .slide__text {
+  opacity: 1;
+          transform: translateX(0);
+}
+.slide__bg {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  will-change: transform;
+}
+.slide:nth-child(1) {
+  left: 0;
+}
+.slide:nth-child(1) .slide__bg {
+  left: 0;
+  background-image: url("http://www.wisewedding.co.kr/upFolder/banner/200113165401_wbanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(1) .slide__overlay-path {
+  fill: #e99c7e;
+}
+
+.slide:nth-child(2) {
+  left: 100%;
+}
+.slide:nth-child(2) .slide__bg {
+  left: -50%;
+  background-image: url("https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(2) .slide__overlay-path {
+  fill: #e1ccae;
+}
+
+.slide:nth-child(3) {
+  left: 200%;
+}
+.slide:nth-child(3) .slide__bg {
+  left: -100%;
+  background-image: url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(3) .slide__overlay-path {
+  fill: #adc5cd;
+}
+
+.slide:nth-child(4) {
+  left: 300%;
+}
+.slide:nth-child(4) .slide__bg {
+  left: -150%;
+  background-image: url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(4) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+
+.slide:nth-child(5) {
+  left: 400%;
+}
+.slide:nth-child(5) .slide__bg {
+  left: -200%;
+  background-image: url("http://www.wisewedding.co.kr/upFolder/banner/191101191348_wbanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(5) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+
+.slide:nth-child(6) {
+  left: 500%;
+}
+.slide:nth-child(6) .slide__bg {
+  left: -250%;
+  background-image: url("http://www.wisewedding.co.kr/upFolder/banner/191101191348_wbanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(6) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+
+.slide:nth-child(7) {
+  left: 600%;
+}
+.slide:nth-child(7) .slide__bg {
+  left: -300%;
+  background-image: url("http://www.wisewedding.co.kr/upFolder/banner/191101191348_wbanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(7) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+
+.slide:nth-child(8) {
+  left: 700%;
+}
+.slide:nth-child(8) .slide__bg {
+  left: -350%;
+  background-image: url("http://www.wisewedding.co.kr/upFolder/banner/191101191348_wbanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(8) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+
+
+.slide__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  min-height: 810px;
+  transition: transform 0.5s 0.5s, opacity 0.2s 0.5s;
+  will-change: transform, opacity;
+  transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+}
+
+.slide__overlay path {
+  opacity: 0.8;
+}
+.slide__text {
+  position: absolute;
+  bottom: 15%;
+  left: 12%;
+  color: #222;
+  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
+  will-change: transform, opacity;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+
+a.slide__text-link:hover { text-decoration:none; color:#FFF;}
+
+
+.slide__text-heading {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.slide__text-desc {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+  color:#222;
+}
+
+.slide__text-link {
+  z-index: 5;
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2.3rem;
+          perspective: 1000px;
+}
+
+.slide__text-link:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+          transform-origin: 50% 100%;
+          transform: rotateX(-85deg);
+  transition: transform 0.3s;
+  will-change: transform;
+}
+.slide__text-link:hover:before {
+          transform: rotateX(0);
+}
+
+
+header {
+  position:absolute;
+  z-index:20;
+  left: 50%;
+  top: 40px;
+  transform: translate(-50%, 0);
+  cursor:pointer;
+  
+}
+
+.heab {
+  top: 80px;
+  color:#222;
+}
+
+.arta {
+  padding: 10rem 0 6rem 0;
+width: 100%;
+  height: 1050px;
+}
+
+.arta div {
+  cursor:pointer;
+}
+
+.arta button{
+  background:none;
+  color:#fff;
+ border:1px solid #eee;
+  position:relative;
+  font-size:0.7rem;
+  padding:10px 30px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.arta button:hover{
+  background:none;
+  color:#fff;
+  border:none;
+}
+.arta button:before, .arta button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #222;
+  transition:400ms ease all;
+}
+.arta button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.arta button:hover:before,.arta button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.arta h5 {
+  font-size:2.5rem;
+
+   font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+}
+
+.arta p {
+    font-size: 3rem;
+  font-weight:bold;
+  padding:2rem 0;
+
+
+}
+
+
+
+.arta section {
+  width: 1200px;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.arta > :nth-child(2) {
+  font-size:1rem;
+  color:#666;
+     font-family: 'Nanum Myeongjo', serif;
+  text-align:center;
+  line-height:1.7rem;
+  padding: 0;
+  margin-top:-1rem;
+  margin-bottom:2rem;
+}
+
+.arta > :nth-child(3)> :nth-child(1) {
+ width: 400px;
+  height: 700px;
+  margin-right:20px;
+  float:left;
+  background:url('http://www.wisewedding.co.kr/upFolder/business_partner/200604140344_partner.jpg') no-repeat;
+  background-size:cover;
+  background-position:center center;
+  padding: 330px 0;
+}
+
+.arta > :nth-child(3)> :nth-child(2) {
+  width: 780px;
+  height: 340px;
+  margin-bottom: 20px;
+  float:left;
+    background:url('https://images.unsplash.com/photo-1593470792503-936d5f070e31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
+  background-size:cover;
+  background-position:bottom center;
+  padding: 150px 0;
+}
+
+.arta > :nth-child(3)> :nth-child(3) {
+  width: 380px;
+  height:340px;
+  margin-right:20px;
+  float:left;
+    background:url('http://www.wisewedding.co.kr/upFolder/business_partner/191105113437_partner.jpg') no-repeat;
+  background-size:cover;
+  background-position:center center;
+  padding: 150px 0;
+}
+
+.arta > :nth-child(3)> :nth-child(4) {
+  width: 380px;
+  height:340px;
+  float:left;
+    background:url('http://www.wisewedding.co.kr/upFolder/business_partner/200522142900_partner.jpg') no-repeat;
+  background-size:cover;
+  background-position:top center;
+  padding: 150px 0;
+margin-bottom: 6rem;
+}
+	
+.cont-slideraa {
+  clear:both;
+  margin: 0 auto;
+  padding:6rem 0 6rem 0;
+}
+
+.cont-slideraa> :nth-child(1) {
+  width: 1200px;
+  margin: 0 auto;
+    text-align:center;
+}
+
+.cont-slideraa h2 {
+    font-size: 2.5rem;
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+
+}
+
+.cont-slideraa p {
+    font-size: 3rem;
+  font-weight:bold;
+  line-height: 3rem;
+margin-bottom:1rem;
+
+}
+
+.cont-slideraa > :nth-child(2) {
+  font-size:1rem;
+  color:#666;
+     font-family: 'Nanum Myeongjo', serif;
+  text-align:center;
+  line-height:1.7rem;
+  padding: 0;
+  margin-top:-1rem;
+  margin-bottom:2rem;
+}
+
+#banner{
+            width: 1200px;
+            height: 400px;
+            background: #e8e8e8;
+            overflow: hidden;
+            position: relative;
+  margin: 0 auto;
+  cursor:pointer;
+        }
+        .banner{
+            max-width: 1200px; 
+            height: 100%;
+            float: right;
+        }
+        span{
+            color: white;
+            font-size: 2.0em;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+.artc {
+  width: 1200px;
+  margin: 0 auto;
+  clear:both;
+  padding: 0rem 0 4rem 0;
+  position:relative;
+}
+
+.artc> :nth-child(1) p {
+      font-size: 4rem;
+  font-weight:bold;
+  line-height: 4rem;
+  text-align:center;
+}
+
+.artc> :nth-child(1) h2 {
+  text-align:center;
+}
+
+.artc h2 {
+  font-size: 2.5rem;
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+}
+
+.artc h3 {
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+  line-height: 2rem;
+  margin:1rem 0;
+}
+
+.artc p {
+font-family: 'Nanum Myeongjo', serif;
+  font-weight:bold;
+  line-height: 1.5rem;
+}
+
+.artc> :nth-child(2) {
+  font-size:1rem;
+  color:#666;
+     font-family: 'Nanum Myeongjo', serif;
+  text-align:center;
+  line-height:1.7rem;
+  padding: 0;
+  margin-top:-1rem;
+  margin-bottom:1.5rem;
+}
+
+.artc> :nth-child(3) {
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+.artc> :nth-child(3) img {
+  width: 100%;
+  height: 350px;
+  transition:0.8s;
+}
+
+.artc> :nth-child(3) img:hover {
+  transform:scale(1.1);
+  cursor:pointer;
+}
+
+.artc> :nth-child(3)> :nth-child(1) {
+margin-right: 40px;
+}
+
+.artc> :nth-child(3)> :nth-child(1)> :nth-child(1) {
+  overflow:hidden;
+    height: 350px;
+}
+
+.artc> :nth-child(3)> :nth-child(2)> :nth-child(1) {
+  overflow:hidden;
+    height: 350px;
+}
+
+.artd {
+padding: 4rem 0 6rem 0;
+  margin:4rem auto 4rem auto;
+}
+
+.artd> :nth-child(2) p{
+  color:#666;
+  font-size: 1rem;
+  line-height:1.7rem;
+  font-family: 'Nanum Myeongjo', serif;
+  margin-top:-1rem;
+  margin-bottom:2rem;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+.table__cell {
+    position: relative;
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table__cell:nth-child(1) {
+    background:url('http://www.wisewedding.co.kr/upFolder/planner/200409144756_styling.jpg') no-repeat;
+  backgroud-size:cover;
+  background-position:top center;
+  filter:grayscale(100%);
+}
+
+.table__cell:nth-child(2) {
+   background:url('http://www.wisewedding.co.kr/upFolder/planner/191111101200_styling.jpg') no-repeat;
+  backgroud-size:cover;
+  background-position:top center;
+    filter:grayscale(100%);
+}
+
+.table__cell:nth-child(3) {
+   background:url('http://www.wisewedding.co.kr/upFolder/planner/191114172637_styling.jpg') no-repeat;
+  backgroud-size:cover;
+  background-position:top center;
+    filter:grayscale(100%);
+}
+
+.table__cell:nth-child(4) {
+  background:url('http://www.wisewedding.co.kr/upFolder/planner/191127140740_styling.jpg') no-repeat;
+  backgroud-size:cover;
+  background-position:top center;
+    filter:grayscale(100%);
+}
+
+.table__cell:nth-child(5) {
+ background:url('http://www.wisewedding.co.kr/upFolder/planner/200714162800_styling.jpg') no-repeat;
+  backgroud-size:cover;
+  background-position:top center;
+    filter:grayscale(100%);
+  
+}
+
+
+
+.table__cell:hover {
+    width: 25%;
+  cursor:pointer;
+
+}
+
+
+
+.table__cell button {
+    opacity: 0;
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.table__cell:hover button {
+    opacity: 1;
+    transition-delay: 300ms;
+}
+
+.table__cell>div> p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.2rem;
+}
+
+
+.table__cell button{
+  background:rgba(0, 0, 0, 0.3);
+  color:#fff;
+ border:2px solid #fff;
+  position:relative;
+  font-size:0.7rem;
+  padding:10px 30px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.table__cell button:hover{
+  background:rgba(0, 0, 0, 0.4);
+  color:#fff;
+  border:none;
+}
+.table__cell button:before,
+.table__cell button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #fff;
+  transition:400ms ease all;
+}
+.table__cell button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.table__cell button:hover:before,
+.table__cell button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.artd h2 {
+    font-size: 2.5rem;
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+text-align:center;
+}
+
+.artd p {
+    font-size: 3rem;
+  font-weight:bold;
+  line-height: 3rem;
+margin-bottom:1rem;
+text-align:center;
+}
+
+
+.letter{
+  padding: 4rem 0 6rem 0;
+  text-align: center;
+   margin-bottom:6rem;
+
+}
+
+.letter>div:first-child{
+  margin-bottom: 2rem;
+}
+
+
+.letter> :nth-child(1) p {
+      font-size: 4rem;
+  font-weight:bold;
+  line-height: 4rem;
+  text-align:center;
+}
+
+.letter> :nth-child(1) h2 {
+  text-align:center;
+}
+
+.letter h2 {
+  font-size: 2.5rem;
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+}
+
+.letter h3 {
+  font-family: 'Nanum Myeongjo', serif;
+  color:#222;
+  line-height: 2rem;
+  margin:1rem 0;
+}
+
+.letter> :nth-child(2) {
+  color:#666;
+  font-size: 1rem;
+  line-height:2rem;
+  font-family: 'Nanum Myeongjo', serif;
+
+  margin-bottom:2rem;
+}
+
+
+.letter div> p{
+  font-size:1.2rem;
+  margin-bottom: 0.5rem;
+  clolr:#666;
+   font-family: 'Nanum Myeongjo', serif;
+  line-height:1.5rem;
+}
+
+.letter small {
+   font-family: 'Nanum Myeongjo', serif;
+  margin-bottom:1.5rem;
+}
+
+.letter section{
+  width: 600px;
+  margin: 0 auto;
+
+}
+
+.letter input{
+  width: 480px;
+  height: 55px;
+  border: 1px solid #ddd;
+  float:left;
+  margin-top:1.5rem;
+}
+
+.letter button{
+   float:right;
+  width: 114px;
+  height: 55px;
+ background-color: #666;
+  color: #eee;
+    margin-top:1.5rem;
+}
+
+.letter img {
+  width: 80px;
+  margin-bottom:40px;
+}
+
+
+footer {
+  background:#fff;
+  padding: 3rem 0 6rem 0;
+}
+
+footer p {
+  line-height:1.5rem;
+}
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker-wrap {
+
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 4rem;
+
+
+    box-sizing: content-box;
+}
+
+.ticker-wrap img {
+  width: 110px;
+  margin-right: 40px;
+  filter:grayscale(100%);
+}
+
+.ticker-wrap .ticker {
+  padding:0 0 0 100%;
+    display: inline-block;
+    height: 5rem;
+
+    white-space: nowrap;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+}
+
+.ticker-wrap .ticker__item {
+    display: inline-block;
+    padding: 0 4rem;
+
+}
+
+
+footer > :nth-child(3) {
+  display: flex;
+  justify-content:space-around;
+padding: 4rem 0 0 0;
+}
+
+footer > :nth-child(3) img {
+  margin-top:1rem;
+  width: 200px;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background:#eee;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+h6 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  transition:0.8s;
+  text-align:right;
+}
+
+h6:hover {
+  margin-right: 20px;
+  cursor:pointer;
+}
+
+
+i {
+    font-size: 24px;
+    color: #fff;
+}
+
+footer {
+    font-family: 'Nanum Myeongjo', serif;
+}
